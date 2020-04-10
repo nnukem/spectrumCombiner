@@ -1,0 +1,8 @@
+.c-social-list {
+    @include helper-reset-list();
+    @include display-flex();
+}
+
+.c-social-list__item:not(:last-child) {
+    margin-right: 1.5rem;
+}

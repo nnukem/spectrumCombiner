@@ -1,0 +1,38 @@
+.c-tooltip {
+    position: relative;
+}
+
+.c-tooltip:before {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: block;
+
+    width: 20.5rem;
+
+    padding: 2.5rem 0.5rem;
+
+    font-size: 1.3rem;
+    text-align: center;
+
+    border: 1px solid $color_orange;
+    border-radius: 0.4rem;
+    background: $color_white;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.c-tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-tooltip[data-tooltip='']:before {
+    display: none;
+}

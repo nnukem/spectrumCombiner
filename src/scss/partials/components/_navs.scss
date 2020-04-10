@@ -1,0 +1,51 @@
+.c-nav-static-list,
+.c-nav-top-list {
+    @include helper-reset-list();
+    @include display-flex();
+}
+
+.c-nav-static-list__item,
+.c-nav-top-list__item {
+    position: relative;
+}
+
+.c-nav-static-list__item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.c-nav-top-list__item:not(:last-child) {
+    margin-right: 4rem;
+}
+
+.c-nav-top-list--alt .c-nav-top-list__item:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.c-nav-top-list--alt .c-nav-top-list__item:not(:last-child):after {
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+
+    content: '';
+
+    width: 0.1rem;
+    height: 1.5rem;
+
+    background: $color_gray_2;
+
+    transform: translateY(-50%);
+}
+
+.c-nav-static-list__label {
+    font-size: 1.5rem;
+
+    @include media("<=l") {
+        font-size: 1.4rem;
+    }
+}
+
+.c-nav-static-list__label:hover {
+    @include media(">t") {
+        color: $color_blue;
+    }
+}

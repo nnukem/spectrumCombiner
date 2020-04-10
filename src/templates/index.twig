@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    {% for section in sections %}
+        {%  import section.file as sec %}
+        {{ sec.init(section.data,section.class) }}
+    {% endfor %}
+{% endblock %}

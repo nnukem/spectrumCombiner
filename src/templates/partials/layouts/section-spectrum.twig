@@ -1,0 +1,52 @@
+{% macro init(data, class, global) %}
+<div class="l-sec l-sec--spectrum">
+    <div class="l-inner l-grid ">
+        <div class="l-grid-row  wrapper">
+            <div class="l-grid__item-12  c-lamp-info js-sticky" data-sticky-wrap>
+                <div class="c-lamp-info__item js-info" name="total">
+                    <span class="c-lamp-info__label">Total LED:</span>
+                    <span class="c-lamp-info__value js-value"></span>
+                </div>
+                <div class="c-lamp-info__item js-info" name="flux">
+                    <span class="c-lamp-info__label">Flux:</span>
+                    <span class="c-lamp-info__value js-value"></span>
+                </div>
+                <div class="c-lamp-info__item js-info" name="cct">
+                    <span class="c-lamp-info__label">CCT:</span>
+                    <span class="c-lamp-info__value js-value"></span>
+                </div>
+                <div class="c-lamp-info__item js-info" name="duv">
+                    <span class="c-lamp-info__label">DUV:</span>
+                    <span class="c-lamp-info__value js-value"></span>
+                </div>
+                <div class="c-lamp-info__item js-info" name="cri">
+                    <span class="c-lamp-info__label">CRI:</span>
+                    <span class="c-lamp-info__value js-value"></span>
+                </div>
+            </div>
+            <div class='l-grid-row l-grid__item-12 u-align-items-stretch u-space-h-2 charts'>
+                <div class="l-grid__item l-grid__item-8 l-grid__item-12@t-m l-sec--spectrum__chart">
+                    <canvas id="spectrum" class="js-spectrum"></canvas>
+                </div>
+                <div class="l-grid__item l-grid-row l-grid__item-4 ">
+                    <div class="l-grid__item-12  l-grid__item-6@t-m l-sec--spectrum__cie">
+                        <canvas  id="cie" class="js-cie"></canvas>
+                        <div id="bgcie" class="bg" >
+                            <canvas id="backgroundcie" ></canvas>
+                        </div>
+                    </div>
+                    <div class="l-grid-row l-grid__item-12 l-grid__item-6@t-m l-sec--spectrum__cri c-cri">
+                    {% for i in 0..14 %}
+                        <div class="c-cri__item" name="cri-samples">
+                            <span class="c-cri__value js-value"></span>
+                            <span class="c-cri__color u-paint-{{i}} js-bar"></span>
+                        </div>    
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endmacro %}

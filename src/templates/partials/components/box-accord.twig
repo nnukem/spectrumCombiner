@@ -1,0 +1,22 @@
+{% macro init(data, class) %}
+<div class="c-accord js-accord {{ class }}">
+  <div class="c-accord__top">
+    <h4 class="t-head t-head--s c-accord__title u-align-items-start">
+      {{data.title}}
+      <span class="t-head__bar i-bg"></span>
+    </h4>
+    <button class="c-btn c-accord__trigger u-paint-orange-1 u-text-uppercase js-accord-trigger">
+      <span class="c-btn__wrap">
+        <span>{{data.triggerTxt}}</span>
+        <svg class="o-ico o-ico--chevron c-btn__ico c-accord__chevron">
+          <use xlink:href="{% svgSprite 'ico-arrow-2-down' %}" role="img"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <div class="c-accord__bot js-accord-content u-hidden">
+    <div class="t-content t-content--alt c-accord__content">{{data.content}}</div>
+  </div>
+</div>
+{% endmacro %}

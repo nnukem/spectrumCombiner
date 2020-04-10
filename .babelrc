@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": ["last 2 versions", "ie >= 11", "not ie <= 10"]
+                },
+                "useBuiltIns": "entry",
+                "debug": false,
+                "modules": "commonjs",
+                "corejs": "3"
+            }
+        ]
+    ],
+    "ignore": ["node_modules"]
+}

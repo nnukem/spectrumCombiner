@@ -1,0 +1,175 @@
+.t-header {
+    margin-bottom: 8rem;
+
+    @include media('<=t') {
+        margin-bottom: 6.4rem;
+    }
+
+    @include media('<=m') {
+        margin-bottom: 5rem;
+    }
+
+    &--filelist{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid $color_gray_3;
+    }
+}
+
+.t-header .t-content {
+    max-width: 84rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.t-header--alt {
+    margin-bottom: 3rem;
+
+    .t-content {
+        margin: unset;
+    }
+}
+
+.t-header--alt-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Head
+   ========================================================================== */
+.t-head {
+    margin: 0;
+}
+
+.t-head:last-child {
+    margin-bottom: 0;
+}
+
+.t-head__bar {
+    display: block;
+
+    width: 6rem;
+    height: 0.2rem;
+
+    margin-top: 1.5rem;
+
+    @include media('<=t-m') {
+        margin-top: 1rem;
+    }
+
+    @include media('<=m') {
+        margin-top: .75rem;
+    }
+}
+
+.t-head__bar--mts {
+    margin-top: 0rem;
+}
+
+.t-head--main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    font-size: 4.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include media('<=t') {
+        font-size: 3.5rem;
+    }
+
+    @include media('<=m') {
+        font-size: 2.8rem;
+    }
+}
+
+.t-head--filelist{
+    padding-bottom: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+
+}
+
+.t-head--primary {
+    font-size: 4.4rem;
+    font-weight: 500;
+
+    @include media('<=t') {
+        font-size: 3.5rem;
+    }
+
+    @include media('<=m') {
+        font-size: 2.8rem;
+    }
+}
+
+.t-head--med-3 {
+    font-size: 3.6rem;
+
+    @include media('<=t') {
+        font-size: 2.8rem;
+    }
+    
+    @include media('<=m') {
+    font-size: 2.4rem;
+    }
+}
+
+.t-head--med-2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    @include media('<=t') {
+        font-size: 2rem;
+    }
+
+    @include media('<=m') {
+        font-size: 1.6rem;
+    }
+}
+
+.t-head--med {
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    @include media('<=t') {
+        font-size: 2rem;
+    }
+
+    @include media('<=m') {
+        font-size: 1.6rem;
+    }
+}
+
+.t-head--s-2 {
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+
+    @include media('<=m') {
+        font-size: 1.6rem;
+    }
+}
+
+.t-head--s {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    @include media('<=m') {
+        font-size: 1.4rem;
+    }
+}
+
+.t-head--gray {
+    color: $color_gray;
+}
+
+.t-head--white {
+    color:white;
+}

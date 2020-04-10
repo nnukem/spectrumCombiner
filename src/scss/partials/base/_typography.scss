@@ -1,0 +1,60 @@
+
+/* Base
+   ========================================================================== */
+html {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    min-width: 320px;
+
+    font-family: $font_normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    background-color: $color_gray;
+
+    color: white;
+
+    @include media('<=t') {
+        font-size: 1.6rem;
+    }
+
+    @include media('<=m') {
+        font-size: 1.4rem;
+    }
+}
+
+/* Global Typography
+   ========================================================================== */
+
+button,
+a {
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: opacity $transition_speed ease-in-out, color $transition_speed ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+
+        @include media(">t") {
+            color: inherit;
+        }
+    }
+}
+
+
+h1{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+
+}

@@ -1,0 +1,17 @@
+{% macro init(data) %}
+    {% if data.title is not empty or data.content is not empty %}
+    <header class="t-header u-text-center">
+        {% if data.title is not empty %}
+            <h2 class="t-head t-head--main t-head--gray">
+                {{ data.title }}
+                <span class="t-head__bar i-bg"></span>
+            </h2>
+        {% endif %}
+        {% if data.content is not empty %}
+            <div class="t-content">
+                {{ data.content | widows }}
+            </div>
+        {% endif %}
+    </header>
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,25 @@
+{% macro init(data,class) %}
+    <div class="c-box c-box--with-ico {{ class }}"  >
+        <svg class="c-box__ico i-fill" role="img">
+            <use xlink:href="{% svgSprite '' %}{{ data.ico  }}"></use>
+        </svg>
+
+        {% if data.title is not empty %}<h3 class="c-box__title">{{ data.title | widows }}</h3>{% endif %}
+        <div class="c-box__content-wrap">
+            {% if data.content is not empty %} <p class="c-box__content">{{ data.content | widows }}</p>{% endif %}
+            {% if data.caption is not empty %}<p class="c-box__caption">{{ data.caption | widows }}</p>{% endif %}
+            {% if data.email is not empty %}<a class="c-btn c-box__link c-box__link-big" href="mailto:{{ data.email }}">{{ data.email | widows }}</a>{% endif %}
+            {% if data.phone is not empty %}<a class="c-btn c-box__link c-box__link-big" href="tel:{{ data.phone }}">{{ data.phone | widows }}</a>{% endif %}
+            {% if data.sepOr is not empty %}<span class="c-sep-or">{{data.sepOr}}</span>{% endif %}
+        </div>
+        {% if data.button is not empty %}<a class="c-btn c-btn--bg  c-btn--bg-small c-btn--bg-blue c-box__button" href="{{ data.button }}">{{ data.buttonLabel | widows }}</a>{% endif %}
+        {% if data.locationLabel is not empty %}
+            <a class="c-btn c-btn--ico c-box__location js-show-on-map" href="{{ data.button }}">
+                <svg class="c-btn__ico i-fill" role="img">
+                    <use xlink:href="{% svgSprite 'ico-pointer' %}"></use>
+                </svg>
+                <span class="c-btn__label">{{ data.locationLabel | widows }}</span>
+            </a>
+        {% endif %}
+    </div>
+{% endmacro %}

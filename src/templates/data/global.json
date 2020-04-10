@@ -1,0 +1,6 @@
+{
+    "global": {
+        "static": "./static/",
+        "svgSprite": "./static/img/symbol/svg/sprite.symbol.svg#"
+    }
+}

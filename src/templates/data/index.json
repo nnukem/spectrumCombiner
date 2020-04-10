@@ -1,0 +1,29 @@
+{
+    "title": "Home",
+    "sections":[
+        {
+            "class": "",
+            "file": "partials/layouts/section-spectrum.twig",
+            "data": {
+
+            }
+        },
+        {
+            "class": "",
+            "file": "partials/layouts/section-spectrums.twig",
+            "data": {
+                "colors":[],
+                "items":[
+                    {"id":1147,"name": "Bridgelux 3000 K","spectrumData":"files/Bridgelux3000.json","ratio":0.594,"count":12,"flux":130,"power":1},
+                    {"id":1070,"name": "Bridgelux 6500 K","spectrumData":"files/Bridgelux6500.json","ratio":0.658,"count":36,"flux":140,"power":1},
+                    {"id":1141,"name": "Bridgelux 7500-8500 K","spectrumData":"files/Bridgelux7500-8500.json","ratio":0.593,"count":36,"flux":140,"power":1},
+                    {"id":1106,"name": "Bridgelux WFS","spectrumData":"files/BridgeluxWFS.json","ratio":0.338,"count":36,"flux":130,"power":1},
+                    {"id":724,"name": "Epiled CYAN","spectrumData":"files/EpiledCYAN.json","ratio":1,"count":24,"flux":40,"power":1},
+                    {"id":872,"name": "Epistar RED","spectrumData":"files/EpistarRED.json","ratio":0.902,"count":24,"flux":45,"power":1},
+                    {"id":991,"name": "Bridgelux RB","spectrumData":"files/BridgeluxRB.json","ratio":0.603,"count":0,"flux":40,"power":1},
+                    {"id":877,"name": "Epiled GREEN","spectrumData":"files/EpiledGREEN.json","ratio":0.95,"count":0,"flux":40,"power":1}
+                ]
+            }
+        }
+    ]
+}

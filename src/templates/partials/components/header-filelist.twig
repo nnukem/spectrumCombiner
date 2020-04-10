@@ -1,0 +1,16 @@
+{% macro init(data) %}
+    {% if data.title is not empty or data.content is not empty %}
+    <header class="t-header t-header--filelist u-text-left">
+        {% if data.title is not empty %}
+            <h2 class="t-head t-head--filelist t-head--gray">
+                {{ data.title }}
+            </h2>
+        {% endif %}
+        {% if data.headerBtnLabel is not empty %}
+            <a class="i-color c-btn c-btn--text" href="{{ data.headerBtnUrl }}">
+                {{ data.headerBtnLabel | widows }}
+            </a>
+        {% endif %}
+    </header>
+    {% endif %}
+{% endmacro %}

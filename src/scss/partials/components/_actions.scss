@@ -1,0 +1,17 @@
+$margin: 5.5rem;
+
+.c-actions:not(:last-child) {
+    margin-bottom: $margin;
+}
+
+.c-actions:not(:first-child) {
+    margin-top: $margin;
+}
+
+.c-actions-list {
+    @include display-flex();
+}
+
+.c-actions-list__item:not(:last-child) {
+    margin-right: 2rem;
+}

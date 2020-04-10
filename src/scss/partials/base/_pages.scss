@@ -1,0 +1,32 @@
+
+
+@each $key,$value in $page-colors {
+    .p-color--#{$key} {
+        .i-all {
+            background-color: $value;
+            color: $value;
+            fill: $value;
+            stroke: $value;
+        }
+        .i-bg {
+            background-color: $value;
+        }
+        .i-color {
+            color: $value;
+        }
+        .i-fill {
+            fill: $value;
+        }
+
+        .i-stroke {
+            stroke: $value;
+        }
+
+        .i-list{
+            li:before{
+                background-color: $value;
+            }
+        }
+    }
+}
+

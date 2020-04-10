@@ -1,0 +1,26 @@
+.c-sticker {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  display: flex;
+
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  padding: 2rem;
+
+  text-align: center;
+
+  background: $color_orange;
+}
+
+.c-sticker__line {
+  display: block;
+
+  margin: 1rem auto;
+  width: 2.5rem;
+  height: 1px;
+
+  background: $color_black;
+}

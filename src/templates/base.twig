@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pl" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %} Base title {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        {% include "head/head-links.twig" %}
+    </head>
+    <body class="js-body {% block bodyclass %}{% endblock %}">
+        <div class="l-page">
+            {% import "partials/layouts/section-header.twig" as sec %}
+            {{ sec.init({}, {}) }}
+
+            {% block body %}{% endblock %}
+        </div>
+
+        <script>
+            DATA_STATIC_URL = "{{ global.static }}"
+        </script>
+
+        <script defer src="{% static 'js/app.js' %}"></script>
+      
+    </body>
+</html>

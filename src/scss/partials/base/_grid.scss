@@ -1,0 +1,43 @@
+.l-grid-row {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.l-grid {
+    @include display-flex();
+}
+
+.l-grid--inverse .l-grid__item:nth-child(1) {
+    order: 2;
+}
+
+.l-grid--inverse .l-grid__item:nth-child(2) {
+    order: 1;
+}
+
+@for $i from 1 through 12 {
+    .l-grid__item-#{$i} {
+        width: 100% / 12 * $i;
+    }
+}
+
+
+@each $name, $value in $breakpoints {
+    @include media("<=#{$name}") {
+        @for $i from 1 through 12 {
+            .l-grid__item-#{$i}\@#{$name} {
+                width: 100% / 12 * $i;
+            }
+        }
+
+        .l-grid--inverse\@#{$name} .l-grid__item:nth-child(1) {
+            order: 2;
+        }
+
+        .l-grid--inverse\@#{$name} .l-grid__item:nth-child(2) {
+            order: 1;
+        }
+    }
+}

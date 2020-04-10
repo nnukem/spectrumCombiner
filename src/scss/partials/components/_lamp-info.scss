@@ -1,0 +1,37 @@
+.c-lamp-info{
+    display:flex;
+    position: relative;
+    left:0;
+    top:0;
+    flex-wrap: wrap;
+    line-height: 1.2;
+    width:100%;
+    padding:1.5rem 0;
+    background-color: $color_gray_4;
+    z-index:1000;
+
+    &__item{
+        margin:0rem 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__label{
+        font-weight: 700;    
+    }
+    &__value{
+        margin-left: 1rem;
+        font-weight: 300;    
+    }
+
+    &__color{
+        display: block;
+        width:1.5rem;
+        height:1.5rem;
+        @each $key,$value in $cri-colors {
+           &.u-paint-#{$key}{
+               background-color: $value;
+           } 
+        }
+    }
+}

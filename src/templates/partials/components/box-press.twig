@@ -1,0 +1,30 @@
+{% macro init(data,class) %}
+    <div class="c-box c-box--left {{ class }}"  >
+        <a class="c-box__image" href="#">
+            <img class="c-box__img" src="{{ data.image }}" alt=""/>
+            <div class="c-box__image-hover">
+                <div class="c-btn c-btn--play">
+                    <div class="c-btn__bg"></div>
+                    <svg class="o-ico o-ico--play" role="img">
+                        <use xlink:href="{% svgSprite 'ico-play' %}"></use>
+                    </svg>
+                </div>
+            </div>
+        </a>
+        {% if class == 'c-box--big' %}
+        <div class="c-box--big__content-wrap">
+            {% endif %}
+            {% if data.date is not empty %}<time class="c-box__date">{{ data.date | widows }}</time>{% endif %}
+            {% if data.title is not empty %}<h3 class="c-box__title">{{ data.title | widows }}</h3>{% endif %}
+            <p class="c-box__content">{{ data.content }}</p>
+            <a class="c-box__link c-btn c-btn--arrow" href="{{ data.btnUrl }}">
+                <span class="c-btn__label">{{ data.btnLabel | widows }}</span>
+                <svg class="o-ico o-ico--arrow" role="img">
+                    <use xlink:href="{% svgSprite 'ico-arrow' %}"></use>
+                </svg>
+            </a>
+        {% if class == 'c-box--big' %}
+        </div>
+        {% endif %}
+    </div>
+{% endmacro %}

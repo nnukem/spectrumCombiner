@@ -1,0 +1,86 @@
+
+/* Colors
+========================================================================== */
+$color_white:       #fff;
+$color_black:       #000000;
+$color_gray:        #353535;
+$color_gray_2:      #9f9f9f;
+$color_gray_3:      #e2e2e2;
+$color_gray_4:      #545454;
+$color_gray_5:      #aaaaaa;
+$color_gray_6:      #464646;
+$color_gray_7:      #f6f7f9;
+$color_gray_8:      #333333;
+$color_red:         #c3341f;
+$color_blue:        #2e3c8b;
+
+$color_orange:      #e87e00;
+$color_main:        $color_blue;
+
+$cri-colors:(
+    '0':rgb(242, 185, 158),
+    '1':rgb(206, 177, 82),
+    '2':rgb(128, 186, 76),
+    '3':rgb(0, 168, 166),
+    '4':rgb(0, 159, 222),
+    '5':rgb(0, 134, 205),
+    '6':rgb(165, 148, 198),
+    '7':rgb(233, 155, 193),
+    '8':rgb(230, 0, 54),
+    '9':rgb(255, 255, 0),
+    '10':rgb(0, 137, 94),
+    '11':rgb(0, 60, 149),
+    '12':rgb(244, 232, 219),
+    '13':rgb(0, 96, 68),
+    '14':rgb(245, 204, 165)
+);
+
+$page-colors: (
+    'red': $color_red,
+    'black': $color_black,
+    'white': $color_white,
+    'gray': $color_gray,
+    'orange': $color_orange
+);
+
+/* Fonts
+========================================================================== */
+$font_poppins:        'Montserrat';
+
+$font_normal:          $font_poppins,  sans-serif;
+
+/* Animations
+========================================================================== */
+$transition_speed:      300ms;
+
+/* Sizes
+========================================================================== */
+$gutter:                7.8rem;
+$size_inner:            144rem + ($gutter * 2);
+
+/* Breakpoints
+========================================================================== */
+$breakpoint_laptop: 1440px;
+$breakpoint_laptop_small: 1280px;
+$breakpoint_tablet: 1200px;
+$breakpoint_tablet_middle: 980px;
+$breakpoint_mobile: 670px;
+$breakpoint_mobile_small: 480px;
+$breakpoint_mobile_thin: 370px;
+$max-breakpoint: 1920;
+
+$breakpoints: (
+    l: $breakpoint_laptop,
+    l-s: $breakpoint_laptop_small,
+    t: $breakpoint_tablet,
+    t-m: $breakpoint_tablet_middle,
+    m: $breakpoint_mobile,
+    m-s: $breakpoint_mobile_small,
+    m-t: $breakpoint_mobile_thin
+);
+
+/* body {
+    @include media("<=t") {
+        background: blue;
+    }
+} */

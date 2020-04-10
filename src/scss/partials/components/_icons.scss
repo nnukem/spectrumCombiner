@@ -1,0 +1,107 @@
+.o-ico {
+    display: inline-block;
+    font-size: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/**
+ * Sizes
+ * xs
+ * xxs
+ * s
+ * m
+ * l
+ * xl
+ * xxl
+ */
+
+.o-ico--contrast {
+    width: 1.6rem;
+    height: 1.6rem;
+
+    background: url("../img/ico-contrast.png") no-repeat;
+}
+
+.o-ico--loop {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.o-ico--social {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.o-ico--arrow {
+    width: 1.4rem;
+    height: 1rem;
+}
+
+.o-ico--arrow-2 {
+    width: 0.6rem;
+    height: 1rem;
+    
+    &.o-ico--arrow-down {
+        height: 0.6rem;
+        width: 1rem;
+    }
+}
+
+.o-ico--play {
+    width: 1.8rem;
+    height: 2.1rem;
+}
+
+.o-ico--contact {
+    width: 3.4rem;
+    height: 2.5rem;
+}
+
+.o-ico--phone {
+    width: 3.4rem;
+    height: 2.8rem;
+}
+
+.o-ico--pin {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.o-ico--pin-big {
+    width: 6rem;
+    height: 6rem;
+}
+
+.o-ico--file {
+    width: .8rem;
+    height: 1.1rem;
+}
+
+.o-ico--how {
+    width: 7.8rem;
+    height: 7.8rem;
+
+    @include media('<=t') {
+        width: 6.2rem;
+        height: 6.2rem;
+    }
+
+    @include media('<=t') {
+        width: 6.2rem;
+        height: 6.2rem;
+    }
+
+    @include media('<=m') {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.o-ico--chevron {
+    width: 1.1rem;
+    height: .7rem;
+}

@@ -1,0 +1,22 @@
+{% macro init(data) %}
+<div class="c-list-box">
+  {% for item in data %}
+    <h2 class="t-head t-head--primary c-list__title" id="{{item.dataTarget}}">{{item.beforeTitle}}{{item.title}}</h2>
+    <ul class="c-list">
+      {% for element in item.elements %}
+        <li class="c-list__item">
+          <div class="c-list__ico-wrap">
+            <svg class="o-ico o-ico--how c-list__ico" role="img">
+                <use xlink:href="./static/img/symbol/svg/sprite.symbol.svg#{{element.ico}}"></use>
+            </svg>
+          </div>
+          <div class="c-list__content">
+            <h3 class="t-head t-head--med-2 c-list__item-title">{{element.title}}</h3>
+            <div class="t-content t-content--alt c-list__item-txt">{{element.txt}}</div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
+{% endmacro %}

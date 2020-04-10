@@ -1,0 +1,201 @@
+
+/* Text aligned
+   ========================================================================== */
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-center {
+    text-align: center;
+
+    .o-image,
+    .c-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-justify {
+    text-align: justify;
+}
+
+.u-text-uppercase {
+    text-transform: uppercase;
+}
+
+.u-text-underline {
+    text-decoration: underline;
+}
+
+.u-hidden {
+    display: none;
+}
+
+.u-show {
+    display: block;
+}
+
+.u-non-visible {
+    visibility: hidden;
+}
+
+.u-visible {
+    visibility: visible;
+}
+
+/* Flexbox utilises
+   ========================================================================== */
+.u-flex {
+    display: flex;
+}
+
+.u-align-items-start {
+    align-items: flex-start;
+}
+
+.u-align-items-center {
+    align-items: center;
+}
+
+.u-align-items-stretch {
+    align-items: stretch;
+}
+
+.u-justify-content-center {
+    justify-content: center;
+}
+
+.u-justify-content-between {
+    justify-content: space-between;
+}
+
+.u-adapt {
+    flex: 1;
+}
+
+.u-grow {
+    flex-grow: 1;
+}
+
+.u-non-grow {
+    flex-grow: 0;
+}
+
+.u-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.u-wrap {
+    flex-wrap: wrap;
+}
+
+.u-mt-0 {
+    margin-top: 0;
+}
+
+.u-index-3 {
+    z-index: 3;
+}
+
+@each $name, $value in $breakpoints {
+    @include media("<=#{$name}") {
+        .u-flex\@#{$name} {
+            display: flex;
+        }
+
+        .u-justify-content-center\@#{$name} {
+            justify-content: center;
+        }
+
+        .u-hidden\@#{$name} {
+            display: none;
+        }
+
+        .u-visible\@#{$name} {
+            visibility: visible;
+        }
+
+        .u-show\@#{$name} {
+            display: none;
+        }
+
+        .u-adapt\@#{$name} {
+            flex: 1;
+        }
+
+        .u-non-grow\@#{$name} {
+            flex-grow: 0;
+        }
+
+        .u-no-wrap\@#{$name} {
+            flex-wrap: nowrap;
+        }
+
+        .u-wrap\@#{$name} {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/* Colors
+   ========================================================================== */
+@each $pallet, $value in $page-colors {
+   @each $name in $value {
+       $i: index($value, $name);
+
+       .u-paint-#{$pallet}-#{$i} {
+           color: #{$name} !important;
+           fill: #{$name} !important;
+       }
+   }
+}
+
+/* Spaces for the grid
+   ========================================================================== */
+@for $i from 1 through 10 {
+    .u-space-h-#{$i} {
+        margin-left: -(0.5rem * $i);
+        margin-right: -(0.5rem * $i);
+
+        > .l-grid__item {
+            padding-left: 0.5rem * $i;
+            padding-right: 0.5rem * $i;
+        }
+    }
+
+    .u-space-v-#{$i} {
+        margin-bottom: -(0.5rem * $i);
+
+        > .l-grid__item {
+            margin-bottom: 0.5rem * $i;
+        }
+    }
+}
+
+@each $name, $value in $breakpoints {
+    @include media("<=#{$name}") {
+        @for $i from 1 through 10 {
+            .u-space-h-#{$i}\@#{$name} {
+                margin-left: -(0.5rem * $i);
+                margin-right: -(0.5rem * $i);
+
+                > .l-grid__item {
+                    padding-left: 0.5rem * $i;
+                    padding-right: 0.5rem * $i;
+                }
+            }
+
+            .u-space-v-#{$i}\@#{$name} {
+                margin-bottom: -(0.5rem * $i);
+
+                > .l-grid__item {
+                    margin-bottom: 0.5rem * $i;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+// Default style for content text
+.t-content {
+    p {
+        margin: 0 0 20px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Sizes
+.t-content--alt {
+    font-size: 1.6rem;
+
+    @include media('<=m') {
+        font-size: 1.4rem;
+    }
+}

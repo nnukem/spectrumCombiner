@@ -1,0 +1,82 @@
+.c-filters {
+    width: 100%;
+}
+
+.c-filters__params {
+    margin-bottom: 2rem;
+}
+
+.c-filters__pag,
+.c-filters__action {
+    margin-top: 4.5rem;
+}
+
+.c-filters-list__head,
+.c-filters-list__row:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.c-filters-list__head,
+.c-filters-list__row {
+    box-shadow: 1px 0 6px rgba($color_black, 0.2);
+}
+
+.c-filters-list__head {
+    font-size: 1.4rem;
+
+    color: $color_white;
+    background: $color_blue;
+}
+
+.c-filters-list__head .c-filters-list__cols {
+    height: 7.5rem;
+}
+
+.c-filters-list__head .o-ico {
+    margin-left: 0.5rem;
+
+    color: $color_orange;
+}
+
+.c-filters-list__col.desc .o-ico {
+    transform: rotate(180deg);
+}
+
+.c-filters-list__row {
+    padding: 4rem 0;
+
+    font-size: 1.6rem;
+
+    background: $color_white;
+}
+
+.c-filters-list__name__bar {
+    display: block;
+
+    width: 4rem;
+    height: 0.1rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.c-filters-list__cols {
+    @include display-flex();
+}
+
+.c-filters-list__col {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.c-filters-list__col--long {
+    width: 40%;
+}
+
+.c-filters-list__col--middle {
+    width: 20%;
+}
+
+.c-filters-list__col--short {
+    width: 15%;
+}

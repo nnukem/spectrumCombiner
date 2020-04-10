@@ -1,0 +1,26 @@
+
+{% macro init(data,class) %}
+    <div class="c-box c-box--spectrum js-spectrum-item {{ class }}" data-name="{{data.name}}" data-spd="{{ data.spectrumData }}">
+        <div class="c-box__content">
+            <form class="ziom">
+                <h2 class="c-box__title">{{ data.name }}</h2>
+                <div class="f-field">
+                    <label class="f-label f-label--text-s">Współczynnik proporcjonalności:</label>
+                    <input name="ratio" class="f-field f-control f-control--default js-spectrum-item-ratio" type="number" value="{{ data.ratio }}" min="0" step="0.01">
+                </div>
+                <div class="f-field">
+                    <label class="f-label f-label--text-s">Ilość diod:</label>
+                    <input name="count" class="f-field f-control f-control--default js-spectrum-item-count" type="number" value="{{ data.count }}" min="0" >
+                </div>
+                <div class="f-field">
+                    <label class="f-label f-label--text-s">Strumień świetlny z 1W:</label>
+                    <input name="flux" class="f-field f-control f-control--default js-spectrum-item-flux" type="number" value="{{ data.flux }}" min="0" >
+                </div>
+            </form>
+        </div>
+        <div class="c-box__spectrum">
+            {#<img class="js-spectrum-item-data" src="{{ data.spectrum }}">#}
+            <canvas class="js-spectrum-chart"></canvas>
+        </div>
+    </div>
+{% endmacro %}

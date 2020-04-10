@@ -1,0 +1,86 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./static",
+    "dist": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "port": 4500,
+      "open": false,
+      "server": {
+        "baseDir": "./"
+      }
+    },
+
+    "static": {
+      "src": "src",
+      "dest": "static"
+    },
+
+    "js": {
+      "src": "js",
+      "dest": "static/js",
+      "entries": {
+        "app": ["./app.js"]
+      },
+      "extensions": ["js", "json"]
+    },
+
+    "css": {
+      "src": "scss",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": ["> 0%"]
+      },
+      "sass": {
+        "indentedSyntax": true,
+        "includePaths": [
+          "./node_modules/normalize.css"
+        ]
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "templates",
+      "dest": "/",
+      "data": "data",
+      "dataFile": "data/global.json",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "json", "twig"],
+      "excludeFolders": ["layouts", "partials", "macros", "data", "components"]
+    },
+
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprites": {
+      "src": "img/svg-sprites",
+      "dest": "img/"
+    },
+
+    "rev" : {
+      "enabled": false
+    },
+
+    "critical" : {
+      "enabled": false,
+      "src": "*.html",
+      "width": 1920,
+      "height": 1080
+    }
+  }
+}

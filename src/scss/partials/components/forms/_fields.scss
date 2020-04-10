@@ -1,0 +1,12 @@
+.f-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    input{
+        width:20%;
+    }
+}
+.f-field:not(:last-child) {
+    margin-bottom: 1rem;
+}

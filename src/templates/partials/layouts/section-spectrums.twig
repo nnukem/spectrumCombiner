@@ -1,0 +1,12 @@
+{% macro init(data, class, global) %}
+<div class="l-sec l-sec--spectrums">
+    <div class="l-inner">
+        <div class="l-grid">
+        {% for i in data.items %}
+            {% import "../components/box-spectrum.twig" as box %}
+            {{ box.init(i) }}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endmacro %}

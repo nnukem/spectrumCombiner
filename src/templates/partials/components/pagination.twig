@@ -1,0 +1,15 @@
+{% macro init(data) %}
+    <nav class="c-pagination js-pagination {{ data.paginationClass }}">
+        <div class="c-pagination__wrapper">
+            <a class="c-pagination__btn c-pagination__btn-arrow js-pagination-prev" href="#"><</a>
+            <ul class="c-pagination__list js-pagination-list">
+
+            </ul>
+            <a class="c-pagination__btn c-pagination__btn-arrow js-pagination-next" href="#">></a>
+        </div>
+        {% if data.paginationShowAllLabel is not empty %}
+            <button class="c-btn js-pagination-all" name="all">{{ data.paginationShowAllLabel }}</button>
+        {% endif %}
+
+    </nav>
+{% endmacro %}

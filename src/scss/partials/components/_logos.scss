@@ -1,0 +1,30 @@
+.c-logo {
+    display: block;
+
+    text-indent: -777em;
+    background-size: cover;
+}
+
+.c-logo--main {
+    width: 16.5rem;
+    height: 5.4rem;
+
+    background-image: url("../img/logo.png");
+
+    @include media("<=l") {
+        width: 11rem;
+        height: 3.6rem;
+    }
+
+    @include media("<=t") {
+        width: 9rem;
+        height: 2.9rem;
+    }
+}
+
+.c-logo--holding {
+    width: 12.2rem;
+    height: 3.4rem;
+
+    background-image: url("../img/logo-holding.png");
+}

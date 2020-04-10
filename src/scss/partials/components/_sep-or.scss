@@ -1,0 +1,32 @@
+.c-sep-or {
+  align-items: center;
+
+  display: flex;
+
+  margin: 1rem 0;
+
+  font-weight: 300;
+  color: $color_gray_2;
+
+  &::after,
+  &::before {
+    content: "";
+
+    width: 13rem;
+    height: 1px;
+
+    background: $color_gray_2;
+
+    @include media('<=m-s') {
+      width: 10rem;
+    }
+  }
+
+  &::before {
+    margin-right: 1rem;
+  }
+
+  &::after {
+    margin-left: 1rem;
+  }
+}
