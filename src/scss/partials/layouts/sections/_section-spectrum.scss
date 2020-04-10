@@ -9,6 +9,11 @@
                 background-color: $color_gray_4;
                 padding:0 0rem 2rem 0rem;
                 position: relative;
+                
+                & > span{
+                    display: block;
+                    width:100%;
+                }
             }
             #spectrum{
                 width:100%;
